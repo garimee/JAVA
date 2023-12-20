@@ -21,7 +21,7 @@ public class String_test {
 //		temp = "상상만 해도 웃음이 나요 ";
 //		System.out.println(temp.concat(song));	
 		
-		String song = "크리스마스에는 많은 것을 원하지 않아요 # 내가 원하는 건 딱 하나예요 # "
+		String song = "크리스마스에는 많은 것을 원하지 않아요 # 내가 원하는 건 딱 하나예요 #"
 		        + "트리 아래의 선물 같은 것도 신경쓰지 않아요 # 당신을 원해요 #"
 		        + "당신이 생각하는 것보다 더 # 내 소원을 이뤄줘요 #"
 		        + "내가 크리스마스에 원하는 건 당신이에요";
@@ -31,10 +31,21 @@ public class String_test {
 		        // 3. 크리스마스를 영어로 변경하여 출력 (대문자로)
 		        // 4. 세 번째 # 뒤의 가사가 무엇인지 출력
 		
-		String[] temp = song.split("#");
-		System.out.println(Arrays.toString(temp));
+		System.out.println("원본: " + song + "\n");
+		
+		String song1 = song.replace("#", "\n");
+		System.out.println(song1);
+//		String[] song2 = song.split("#");
+//		for(String sng : song2)
+//			System.out.println(sng);
 		
 		String word = song.replaceAll("당신", "그대");
-		System.out.println(word);
+		System.out.println("\n\n" + word + "\n");
+		
+		String word2 = song.replaceAll("크리스마스", "christmas").toUpperCase();
+		System.out.println(word2);
+		
+		String[] song2 = song.split("#");
+		System.out.println(song2[3].trim());
 	}
 }
