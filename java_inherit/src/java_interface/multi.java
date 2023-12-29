@@ -10,7 +10,7 @@ public class multi {
 		
 		Bluetooth k1 = new keyboard();
 		k1.SetBluetooth();
-		k1.keyValue();
+		k1.keyValue(); 
 	}
 }
 
