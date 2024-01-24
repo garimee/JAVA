@@ -8,10 +8,10 @@ public class menu {
 	private int ml; // 용량
 	private int cost1; // 핫 베이직
 	private int cost2; // 아이스 소프트
-	private Category type = Category.음료; // 분류
+	private Category type; // 분류
 	
 	public menu() {} // 기본 생성자 메서드
-	public menu(String menu_name, int cost1, int cots2, int caffeine, int calroie, int ml, Category type) { // 매개변수가 있는 생성자 메서드
+	public menu(String menu_name, int cost1, int cost2, int caffeine, int calorie, int ml, Category type) { // 매개변수가 있는 생성자 메서드
 		this.menu_name = menu_name;
 		this.cost1 = cost1;
 		this.cost2 = cost2;
@@ -23,7 +23,7 @@ public class menu {
 	
 	@Override
 	public String toString() {
-		return null;
+		return menu_name;
 	}
 	
 	
